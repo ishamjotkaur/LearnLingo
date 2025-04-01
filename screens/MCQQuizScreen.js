@@ -23,7 +23,7 @@ const MCQQuizScreen = ({ route, navigation }) => {
       } else {
         Alert.alert(
           "Quiz Done",
-          `You got ${score + (picked === questions[current].correctAnswer ? 1 : 0)} out of ${questions.length} right`,
+          `You got ${score + (picked === questions[current].correctAnswer ? 1 : 0)} out of ${questions.length} right!`,
           [{ text: "OK", onPress: () => navigation.goBack() }]
         );
       }
@@ -53,13 +53,13 @@ const MCQQuizScreen = ({ route, navigation }) => {
           ]}
           onPress={() => handlePress(i)}
         >
-          <Text>{option}</Text>
+          <Text style={styles.optionText}>{option}</Text>
         </TouchableOpacity>
       ))}
       
       <View style={styles.footer}>
-        <Text>Question: {current + 1}/{questions.length}</Text>
-        <Text>Score: {score}</Text>
+        <Text style={styles.progressText}>Question: {current + 1}/{questions.length}</Text>
+        <Text style={styles.scoreText}>Score: {score}</Text>
       </View>
     </View>
   );
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     color: '#666',
   },
   scoreText: {
-    color: '#6a1b9a',
+    color: '#6a1b9a', 
     fontWeight: 'bold',
   },
 });

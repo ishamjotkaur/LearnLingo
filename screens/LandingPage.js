@@ -52,9 +52,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   logo: {
-    width: 120,
-    height: 120,
-    marginBottom: 30,
+    width: 200,
+    height: 200,
+    marginBottom: 20,
   },
   header: {
     fontSize: 28,

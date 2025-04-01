@@ -62,12 +62,13 @@ const FillBlankQuizScreen = ({ route, navigation }) => {
       >
         <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
-      
-      <Text style={styles.counter}>
-        Question {currentQuestionIndex + 1} of {allQuestions.length}
-      </Text>
-      
-      <Text style={styles.scoreText}>Score: {score}</Text>
+
+      <View style={styles.statusBar}>
+        <Text style={styles.counter}>
+          Question: {currentQuestionIndex + 1}/{allQuestions.length}
+        </Text>
+        <Text style={styles.scoreText}>Score: {score}</Text>
+      </View>
     </View>
   );
 };
@@ -99,23 +100,25 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 8,
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 30,  
   },
   buttonText: {
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
   },
+  statusBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    paddingHorizontal: 10,
+  },
   counter: {
-    textAlign: 'center',
     color: '#666',
-    marginTop: 10,
   },
   scoreText: {
-    textAlign: 'center',
     color: '#6a1b9a',
     fontWeight: 'bold',
-    marginTop: 5,
   },
 });
 

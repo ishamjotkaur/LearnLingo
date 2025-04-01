@@ -2,234 +2,365 @@ export const quizQuestions = {
   English: {
     mcq: [
       {
-        question: "What is the capital of France?",
-        options: ["London", "Paris", "Berlin", "Madrid"],
+        question: "Which phrase would you use to order coffee?",
+        options: [
+          "I am coffee", 
+          "Can I have a coffee?", 
+          "Coffee me", 
+          "You give coffee"
+        ],
         correctAnswer: 1
       },
       {
-        question: "Which planet is known as the Red Planet?",
-        options: ["Venus", "Mars", "Jupiter", "Saturn"],
+        question: "What's the missing word? 'She ___ a doctor.'",
+        options: ["am", "is", "are", "be"],
         correctAnswer: 1
       },
       {
-        question: "How many continents are there on Earth?",
-        options: ["5", "6", "7", "8"],
+        question: "Which sentence is correct?",
+        options: [
+          "He go to school", 
+          "He goes to school", 
+          "He going to school", 
+          "He to go school"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "What's the opposite of 'cheap'?",
+        options: ["Small", "Expensive", "Heavy", "Soft"],
+        correctAnswer: 1
+      },
+      {
+        question: "Which word doesn't fit? 'Cat, dog, ___, car'",
+        options: ["Bird", "Fish", "Tree", "Cow"],
         correctAnswer: 2
       },
       {
-        question: "Who painted the Mona Lisa?",
-        options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
+        question: "How would you ask for the time?",
+        options: [
+          "What time is?", 
+          "Time now?", 
+          "What's the time?", 
+          "Tell me time"
+        ],
         correctAnswer: 2
       },
       {
-        question: "What is the largest mammal in the world?",
-        options: ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
+        question: "Complete: 'There are ___ apples in the fridge.'",
+        options: ["much", "many", "a few", "any"],
         correctAnswer: 1
       },
       {
-        question: "Which country gifted the Statue of Liberty to the US?",
-        options: ["Spain", "France", "Italy", "England"],
-        correctAnswer: 1
-      },
-      {
-        question: "What is the chemical symbol for gold?",
-        options: ["Go", "Gd", "Au", "Ag"],
+        question: "Which is a greeting?",
+        options: ["Goodbye", "Thank you", "Hello", "Sorry"],
         correctAnswer: 2
-      },
-      {
-        question: "Which language has the most native speakers?",
-        options: ["English", "Spanish", "Hindi", "Mandarin"],
-        correctAnswer: 3
       }
     ],
     fillBlank: [
       {
-        question: "The capital of France is ____.",
-        answer: "Paris"
+        question: "The plural of 'child' is ____.",
+        answer: "children"
       },
       {
-        question: "The chemical formula for water is ____.",
-        answer: "H2O"
+        question: "I ____ to the store yesterday. (go)",
+        answer: "went"
       },
       {
-        question: "The largest ocean on Earth is the ____ Ocean.",
-        answer: "Pacific"
+        question: "The opposite of 'hot' is ____.",
+        answer: "cold"
       },
       {
-        question: "The process by which plants make their food is called ____.",
-        answer: "photosynthesis"
+        question: "She ____ reading a book right now. (be)",
+        answer: "is"
       },
       {
-        question: "The ____ is the longest river in the world.",
-        answer: "Nile"
+        question: "We need milk, eggs, ____ bread.",
+        answer: "and"
       },
       {
-        question: "The first president of the United States was ____.",
-        answer: "George Washington"
+        question: "How ____ apples are in the basket?",
+        answer: "many"
       },
       {
-        question: "The ____ is the smallest bone in the human body.",
-        answer: "stapes"
+        question: "The past tense of 'eat' is ____.",
+        answer: "ate"
       },
       {
-        question: "The country known as the Land of the Rising Sun is ____.",
-        answer: "Japan"
+        question: "You ____ wash your hands before eating. (should/must)",
+        answer: "should"
+      }
+    ],
+    imageMatch: [
+      {
+        questionImage: require('../assets/Images/car.png'),
+        options: ["Car", "Truck", "Bus", "Motorcycle"],
+        correctAnswer: "Car"
+      },
+      {
+        questionImage: require('../assets/Images/house.png'),
+        options: ["House", "Apartment", "Office", "Barn"],
+        correctAnswer: "House"
+      },
+      {
+        questionImage: require('../assets/Images/butterfly.png'),
+        options: ["Butterfly", "Moth", "Dragonfly", "Bee"],
+        correctAnswer: "Butterfly"
+      },
+      {
+        questionImage: require('../assets/Images/strawberry.png'),
+        options: ["Strawberry", "Raspberry", "Blueberry", "Blackberry"],
+        correctAnswer: "Strawberry"
+      },
+      {
+        questionImage: require('../assets/Images/gloves.png'),
+        options: ["Gloves", "Mittens", "Socks", "Scarf"],
+        correctAnswer: "Gloves"
       }
     ]
   },
   Spanish: {
     mcq: [
       {
-        question: "¿Cuál es la capital de España?",
-        options: ["Barcelona", "Valencia", "Madrid", "Sevilla"],
+        question: "¿Cómo se pide agua en un restaurante?",
+        options: [
+          "Dame agua", 
+          "Quiero agua", 
+          "¿Me trae agua, por favor?", 
+          "Agua ahora"
+        ],
         correctAnswer: 2
       },
       {
-        question: "¿Cuántos días tiene un año bisiesto?",
-        options: ["365", "366", "364", "367"],
+        question: "¿Cuál es la forma correcta? 'Yo ___ estudiante.'",
+        options: ["soy", "eres", "es", "somos"],
+        correctAnswer: 0
+      },
+      {
+        question: "¿Qué palabra no es un color?",
+        options: ["Azul", "Gato", "Rojo", "Verde"],
         correctAnswer: 1
       },
       {
-        question: "¿Qué famoso pintor español pintó 'Guernica'?",
-        options: ["Salvador Dalí", "Pablo Picasso", "Francisco Goya", "Diego Velázquez"],
+        question: "¿Cómo se dice 'I'm hungry'?",
+        options: [
+          "Tengo frío", 
+          "Tengo hambre", 
+          "Estoy hambre", 
+          "Tengo sed"
+        ],
         correctAnswer: 1
       },
       {
-        question: "¿Cuál es el río más largo de España?",
-        options: ["Ebro", "Tajo", "Guadiana", "Duero"],
-        correctAnswer: 1
+        question: "¿Cuál es la pregunta correcta para '¿Cuántos años tienes?'?",
+        options: [
+          "How old are you?", 
+          "What’s your age?", 
+          "How many years you have?", 
+          "When is your birthday?"
+        ],
+        correctAnswer: 0
       },
       {
-        question: "¿En qué año terminó la Guerra Civil Española?",
-        options: ["1936", "1939", "1945", "1950"],
-        correctAnswer: 1
-      },
-      {
-        question: "¿Qué escritor escribió 'Don Quijote de la Mancha'?",
-        options: ["Federico García Lorca", "Miguel de Cervantes", "Lope de Vega", "Jorge Luis Borges"],
-        correctAnswer: 1
-      },
-      {
-        question: "¿Cuál es la montaña más alta de España?",
-        options: ["Aneto", "Mulhacén", "Teide", "Naranjo de Bulnes"],
+        question: "¿Qué significa '¡Cuidado!'?",
+        options: ["Hello!", "Thank you!", "Careful!", "Goodbye!"],
         correctAnswer: 2
       },
       {
-        question: "¿Qué famosa fiesta española ocurre en Pamplona?",
-        options: ["La Tomatina", "Las Fallas", "San Fermín", "La Feria de Abril"],
+        question: "Complete: 'Necesito ___ libro.' (a/an)",
+        options: ["un", "una", "el", "la"],
+        correctAnswer: 0
+      },
+      {
+        question: "¿Cuál es una despedida?",
+        options: ["Hola", "Por favor", "Adiós", "Gracias"],
         correctAnswer: 2
       }
     ],
     fillBlank: [
       {
-        question: "La capital de Argentina es ____.",
-        answer: "Buenos Aires"
+        question: "El plural de 'ciudad' es ____.",
+        answer: "ciudades"
       },
       {
-        question: "El ____ es el animal nacional de España.",
-        answer: "toro"
+        question: "Yo ____ comer paella. (querer/presente)",
+        answer: "quiero"
       },
       {
-        question: "El autor de 'Cien años de soledad' es ____.",
-        answer: "Gabriel García Márquez"
+        question: "Lo opuesto de 'grande' es ____.",
+        answer: "pequeño"
       },
       {
-        question: "El ____ es el instrumento musical nacional de España.",
-        answer: "guitarra"
+        question: "Nosotros ____ estudiantes. (ser)",
+        answer: "somos"
       },
       {
-        question: "La ciudad española conocida por la Alhambra es ____.",
-        answer: "Granada"
+        question: "Tengo un perro ____ dos gatos.",
+        answer: "y"
       },
       {
-        question: "El ____ es el plato típico de Valencia.",
-        answer: "paella"
+        question: "¿____ años tienes?",
+        answer: "Cuántos"
       },
       {
-        question: "La moneda oficial de España antes del euro era la ____.",
-        answer: "peseta"
+        question: "El femenino de 'niño' es ____.",
+        answer: "niña"
       },
       {
-        question: "El ____ es el festival donde la gente arroja tomates.",
-        answer: "La Tomatina"
+        question: "____ favor, pásame el agua.",
+        answer: "Por"
+      }
+    ],
+    imageMatch: [
+      {
+        questionImage: require('../assets/Images/car.png'),
+        options: ["Coche", "Camión", "Autobús", "Motocicleta"],
+        correctAnswer: "Coche"
+      },
+      {
+        questionImage: require('../assets/Images/house.png'),
+        options: ["Casa", "Apartamento", "Oficina", "Granero"],
+        correctAnswer: "Casa"
+      },
+      {
+        questionImage: require('../assets/Images/butterfly.png'),
+        options: ["Mariposa", "Polilla", "Libélula", "Abeja"],
+        correctAnswer: "Mariposa"
+      },
+      {
+        questionImage: require('../assets/Images/strawberry.png'),
+        options: ["Fresa", "Frambuesa", "Arándano", "Mora"],
+        correctAnswer: "Fresa"
+      },
+      {
+        questionImage: require('../assets/Images/gloves.png'),
+        options: ["Guantes", "Manoplas", "Calcetines", "Bufanda"],
+        correctAnswer: "Guantes"
       }
     ]
   },
   French: {
     mcq: [
       {
-        question: "Quelle est la capitale de la Belgique?",
-        options: ["Anvers", "Bruges", "Bruxelles", "Liège"],
+        question: "Comment demande-t-on l'addition au restaurant?",
+        options: [
+          "Donne-moi l'addition", 
+          "Je veux payer", 
+          "L'addition, s'il vous plaît", 
+          "Argent maintenant"
+        ],
         correctAnswer: 2
       },
       {
-        question: "Quel fleuve traverse Paris?",
-        options: ["Le Rhin", "La Loire", "La Seine", "Le Rhône"],
+        question: "Complete: 'Je ___ français.' (parler)",
+        options: ["parles", "parle", "parlons", "parlez"],
+        correctAnswer: 1
+      },
+      {
+        question: "Quel mot est un animal?",
+        options: ["Chaise", "Livre", "Chien", "Fenêtre"],
         correctAnswer: 2
       },
       {
-        question: "Qui a peint 'La Nuit étoilée'?",
-        options: ["Claude Monet", "Vincent van Gogh", "Pablo Picasso", "Paul Cézanne"],
+        question: "Comment dit-on 'It's raining'?",
+        options: [
+          "Il fait soleil", 
+          "Il pleut", 
+          "Il neige", 
+          "Il fait chaud"
+        ],
         correctAnswer: 1
       },
       {
-        question: "Quelle est la montagne la plus haute de France?",
-        options: ["Le Mont Ventoux", "Le Mont Blanc", "La Meije", "Les Écrins"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quelle fromage est produit en Normandie?",
-        options: ["Roquefort", "Camembert", "Comté", "Brie"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quelle année a eu lieu la Révolution française?",
-        options: ["1776", "1789", "1799", "1815"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quel est le plat traditionnel de la Provence?",
-        options: ["Bouillabaisse", "Cassoulet", "Choucroute", "Tartiflette"],
+        question: "Quelle phrase est correcte?",
+        options: [
+          "Je vais au supermarché", 
+          "Je va au supermarché", 
+          "Je aller supermarché", 
+          "Je vais à supermarché"
+        ],
         correctAnswer: 0
       },
       {
-        question: "Quelle île française est connue comme 'l'Île de Beauté'?",
-        options: ["La Réunion", "La Martinique", "La Corse", "Tahiti"],
-        correctAnswer: 2
+        question: "Que signifie 'Dépêche-toi!'?",
+        options: ["Stop!", "Hurry up!", "Quiet!", "Come here!"],
+        correctAnswer: 1
+      },
+      {
+        question: "Complete: 'J'ai ___ frère.' (a/an)",
+        options: ["un", "une", "le", "la"],
+        correctAnswer: 0
+      },
+      {
+        question: "Quand dit-on 'Bonne nuit'?",
+        options: [
+          "Le matin", 
+          "Quand on se couche", 
+          "Quand on mange", 
+          "À midi"
+        ],
+        correctAnswer: 1
       }
     ],
     fillBlank: [
       {
-        question: "La tour la plus célèbre de Paris est la Tour ____.",
-        answer: "Eiffel"
+        question: "Le pluriel de 'journal' est ____.",
+        answer: "journaux"
       },
       {
-        question: "Le ____ est le fleuve qui traverse Lyon.",
-        answer: "Rhône"
+        question: "Je ____ français. (parler/present)",
+        answer: "parle"
       },
       {
-        question: "La fête nationale française s'appelle ____.",
-        answer: "le 14 juillet"
+        question: "Le contraire de 'grand' est ____.",
+        answer: "petit"
       },
       {
-        question: "Le ____ est le symbole national de la France.",
-        answer: "coq"
+        question: "Nous ____ étudiants. (être)",
+        answer: "sommes"
       },
       {
-        question: "Le musée ____ est le plus grand musée d'art au monde.",
-        answer: "du Louvre"
+        question: "J'ai un chat ____ un chien.",
+        answer: "et"
       },
       {
-        question: "La région française connue pour ses vins est ____.",
-        answer: "la Bourgogne"
+        question: "____ t'appelles-tu?",
+        answer: "Comment"
       },
       {
-        question: "Le président français qui a créé le 14 juillet comme fête nationale était ____.",
-        answer: "Napoléon"
+        question: "La forme féminine de 'acteur' est ____.",
+        answer: "actrice"
       },
       {
-        question: "La ville française connue pour son festival de cinéma est ____.",
-        answer: "Cannes"
+        question: "____ excusez-moi, où est la gare?",
+        answer: "Pardon"
+      }
+    ],
+    imageMatch: [
+      {
+        questionImage: require('../assets/Images/car.png'),
+        options: ["Voiture", "Camion", "Bus", "Moto"],
+        correctAnswer: "Voiture"
+      },
+      {
+        questionImage: require('../assets/Images/house.png'),
+        options: ["Maison", "Appartement", "Bureau", "Grange"],
+        correctAnswer: "Maison"
+      },
+      {
+        questionImage: require('../assets/Images/butterfly.png'),
+        options: ["Papillon", "Phalène", "Libellule", "Abeille"],
+        correctAnswer: "Papillon"
+      },
+      {
+        questionImage: require('../assets/Images/strawberry.png'),
+        options: ["Fraise", "Framboise", "Myrtille", "Mûre"],
+        correctAnswer: "Fraise"
+      },
+      {
+        questionImage: require('../assets/Images/gloves.png'),
+        options: ["Gants", "Moufles", "Chaussettes", "Écharpe"],
+        correctAnswer: "Gants"
       }
     ]
   }
