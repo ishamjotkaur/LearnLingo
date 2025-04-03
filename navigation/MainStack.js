@@ -5,6 +5,7 @@ import QuizTypeScreen from '../screens/QuizTypeScreen';
 import MCQQuizScreen from '../screens/MCQQuizScreen';
 import FillBlankQuizScreen from '../screens/FillBlankQuizScreen';
 import ImageQuizScreen from '../screens/ImageQuizScreen';
+import ProfilePage from '../screens/ProfilePage';
 
 const Stack = createStackNavigator();
 
@@ -47,6 +48,11 @@ export default function MainStack() {
         title: `${route.params.language} Image Quiz`,
         tabBarStyle: { display: 'none' }
       })}
+      />
+      <Stack.Screen 
+        name="Profile" 
+        component={ProfilePage}
+        options={{ title: 'User Profile' }}
       />
     </Stack.Navigator>
   );
