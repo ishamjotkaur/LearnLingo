@@ -5,6 +5,7 @@ import LandingPage from '../screens/LandingPage';
 import ConversationSimulator from '../screens/ConversationSimulator';
 import ProfilePage from '../screens/ProfilePage';
 
+
 const Tab = createBottomTabNavigator();
 
 export default function MainTabs() {
