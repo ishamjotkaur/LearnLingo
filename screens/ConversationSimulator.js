@@ -9,7 +9,7 @@ const ConversationSimulator = () => {
   const [error, setError] = useState(null);
 
   const apiEndpoint = 'https://api.perplexity.ai/chat/completions';
-  const apiKey = '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';
+  const apiKey = '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'; // Replace with your actual API key
 
   const sendMessage = async () => {
     if (!inputMessage.trim()) return;
@@ -24,30 +24,41 @@ const ConversationSimulator = () => {
     setInputMessage('');
 
     try {
-      const url = apiEndpoint;
       const headers = {
-        "Authorization": `Bearer ${apiKey}`,
-        "Content-Type": "application/json"
-      };
-      const data = {
-        "model": "llama-3.1-sonar-small-128k-online",
-        "messages": [{"role": "user", "content": inputMessage}],
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
       };
 
-      const response = await axios.post(url, data, { headers });
+      const data = {
+        model: 'llama-3.1-sonar-small-128k-online',
+        messages: [
+          {
+            role: 'system',
+            content:
+              'You are a casual and friendly chatbot. Your replies should always feel like a relaxed, ongoing conversation. Always give short and friendly responses, and ask a follow-up question to keep the chat going.',
+          },
+          ...updatedMessages,
+        ],
+      };
+
+      const response = await axios.post(apiEndpoint, data, { headers });
 
       if (response.data?.choices?.[0]?.message) {
         const botMessage = {
           role: 'assistant',
-          content: response.data.choices[0].message.content
+          content: response.data.choices[0].message.content,
         };
-        setMessages(prev => [...prev, botMessage]);
+        setMessages((prev) => [...prev, botMessage]);
       } else {
         throw new Error('Invalid response format from API');
       }
     } catch (err) {
       console.error('Error sending message:', err);
-      setError(err.response?.data?.message || err.message || 'Failed to get response from the bot.');
+      setError(
+        err.response?.data?.message ||
+          err.message ||
+          'Failed to get response from the bot.'
+      );
     } finally {
       setLoading(false);
     }
@@ -58,10 +69,12 @@ const ConversationSimulator = () => {
       <FlatList
         data={messages}
         renderItem={({ item }) => (
-          <View style={[
-            styles.messageContainer,
-            item.role === 'user' ? styles.userMessage : styles.botMessage
-          ]}>
+          <View
+            style={[
+              styles.messageContainer,
+              item.role === 'user' ? styles.userMessage : styles.botMessage,
+            ]}
+          >
             <Text style={styles.messageText}>{item.content}</Text>
           </View>
         )}
@@ -77,7 +90,7 @@ const ConversationSimulator = () => {
           style={styles.input}
           value={inputMessage}
           onChangeText={setInputMessage}
-          placeholder="Type your message..."
+          placeholder="Ask me anything..."
           editable={!loading}
           multiline
         />
@@ -120,9 +133,6 @@ const styles = StyleSheet.create({
   messageText: {
     fontSize: 16,
     color: '#000',
-  },
-  userMessageText: {
-    color: '#fff',
   },
   inputContainer: {
     flexDirection: 'row',
