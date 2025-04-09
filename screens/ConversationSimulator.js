@@ -9,7 +9,7 @@ const ConversationSimulator = () => {
   const [error, setError] = useState(null);
 
   const apiEndpoint = 'https://api.perplexity.ai/chat/completions';
-  const apiKey = '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'; // Replace with your actual API key
+  const apiKey = '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'; 
 
   const sendMessage = async () => {
     if (!inputMessage.trim()) return;
